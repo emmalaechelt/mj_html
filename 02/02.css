@@ -1,16 +1,103 @@
-header {
+/*전체 선택자 */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*조상 자손 선택자 */
+header ul {
     background-color: green;
     color: white;
 }
 
-.gl {
-    background-color: blue;
+/*부모 자식 선택자 */
+footer>ul {
+    background-color: black;
     color: white;
 }
-.g2 {background-color:red;
-        color: white;
+
+/*속성 선택자 */
+h2[class] {
+    color: yellow;
 }
 
-#html{background-color: blueviolet;
-    color:white
+/*클래스 선택자*/
+.g1 {
+    /*배경색과 글자색 */
+    background-color: blue;
+    color: white;
+
+    /*가로와 세로 */
+    width: 50%;
+    height: 80px;
+
+    /*안쪽여백 */
+    padding: 20px;
+
+    /*바깥여백 */
+    margin: 20px;
+
+    box-sizing: border-box;
+
+    /*패딩과 테두리를 포함 */
+    box-sizing: border box;
+    display: flex;
+    justify-content;
+    center;
+    align-items: center;
+}
+
+.g2 {
+    background-color: red;
+    color: white;
+}
+
+/*아이디 선택자 */
+#html {
+    background-color: blueviolet;
+    color: white
+}
+
+/*그룹 */
+#s2 > p {
+    background-color: gainsboro;
+}
+
+/*인라인스타일 변경 */
+strong {
+    display: inline-block;
+    background-color: brown;
+    color: white;
+
+    width: 50%;
+    height: 40px;
+}
+
+/*구글폰트 */
+article>p {
+    font-family: "Single Day", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/*플렉스박스 사이 띄우기 */
+.fbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.fbox > div {
+    margin-right: 20px;
+    
+}
+
+/*이미지 가장자리 둥글게 */
+img {
+    border-radius: 25%;
+}
+
+ul {
+    life-style: none;
+    display: flex;
 }
