@@ -1,0 +1,122 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    width: 80%;
+    margin-left: 10%;
+}
+
+header,
+main {
+    background-color: aliceblue;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav>ul {
+    display: flex;
+}
+
+nav li {
+    padding: 5px;
+    margin: 2px;
+}
+
+article {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+article>h1 {
+    display: flex;
+    justify-content: center;
+}
+
+article>p {
+    padding: 30px 50px;
+}
+
+a {
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+
+a:hover {
+    background-color: brown;
+
+}
+
+article>p {
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav {
+    display: flex;
+}
+
+.textred {
+    color: red;
+}
+
+#menu2 {
+    color: blue;
+}
+
+img {
+    border-radius: 50%;
+}
+
+section {
+background-color: white;
+margin: 30px;
+padding: 20px;
+border-radius: 15px;
+}
+
+.fbox {
+    display: flex;
+}
+
+.fbox > p {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 20px;
+    height: 150px;
+    width: 80%;
+}
+
+.fbox > div {
+    margin: 10px;
+}
+
+h2 {
+    color: midnightblue;
+}
+
+.textblue {
+    color: blue;
+    background-color: aliceblue;
+    border-radius: 10%;
+}
+
+#menu2 {
+    color: blue;
+}
