@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 header, main, footer {
     margin-left: 10%;
     width: 80%;
@@ -20,3 +21,27 @@ footer > ul {
 
 }
 
+=======
+header, main, footer {
+    margin-left: 10%;
+    width: 80%;
+    border: 1px solid blue;
+    margin-top: 10px;
+}
+
+header {
+    height: 
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    height: 70%;
+}
+footer > ul {
+
+}
+
+>>>>>>> 3434fd0695ddfc092291d27579e7f2789fa67877
