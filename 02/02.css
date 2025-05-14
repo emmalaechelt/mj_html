@@ -120,3 +120,12 @@ h2 {
 #menu2 {
     color: blue;
 }
+
+@media screen and (max-width: 1024px) {
+ body {
+    width: 100%;
+    margin-left: 0%;
+ }
+    
+} 
+    

@@ -6,7 +6,6 @@ header, main, footer {
 }
 
 header {
-    height: 
     background-color: blue;
     color: white;
     display: flex;
@@ -14,8 +13,9 @@ header {
 }
 
 main {
-    height: 70%;
+    height: 70vh;
 }
+
 footer > ul {
 
 }
