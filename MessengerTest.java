@@ -1,26 +1,23 @@
-package edu.ruby.java.ch07.abstraction;
+package edu.ruby.java.ch08.innerClass;
+
+import com.ruby.java.ch07.abstraction.Messenger;
 
 public class MessengerTest {
 	public static void main(String[] args) {
 		
-		IPhoneMessenger iphone = new IPhoneMessenger();
-		GalaxyMessenger galaxy = new GalaxyMessenger();
+		Messenger test = new Messenger() {
 		
-		System.out.println("메신저 최소 문자 크기" + Messenger.Min_Size);
-		System.out.println("메신저 최대 문자 크기" + Messenger.Max_Size);
-	
-		iphone.setLogin(true);
-		iphone.getMessage();
-		iphone.setMessage("hello");
-		iphone.clearMessage();
+			public void setMessage(String msg) {
+				System.out.println("test에서 메시지를 설정합니다 : " + msg);
+			}
+			
+			public String getMessage() {
+				return "test";
+			}
+		};
 		
-		galaxy.setLogin(true);
-		galaxy.getMessage();
-		galaxy.setMessage("hi");
-		galaxy.changeKeyboard();
-		galaxy.fileDownload();
-		galaxy.fileUpload();
-		iphone.draw_textBox();
-		iphone.draw_submitButton();
+		//
+		System.out.println(test.getMessage());
+		test.setMessage("have a nice day!");
 	}
 }
