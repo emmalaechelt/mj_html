@@ -1,0 +1,23 @@
+.mdiv {
+    margin: 20px;
+    display: flex;
+}
+
+#msg {
+    display: flex;
+    align-items: center;
+    border: 1px solid darkgreen;
+    width: 400px;
+    padding: 10px;
+
+    font-size: large;
+    font-weight: bold;
+}
+
+.mdiv > div {
+    margin: 10px;
+}
+
+.mdiv > button {
+    margin: 5px;
+}
