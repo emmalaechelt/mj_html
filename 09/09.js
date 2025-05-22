@@ -40,14 +40,18 @@ if(txt1.value > n) {
     btArea.style.display = 'block';
 }
 // 다시하기 버튼이 눌러지면 
-// 1. flag값을 false로 만들기
-// 2. input과 확인버튼 보여지기
-bt.addEventListener("click",()=>{
-
-})
-    
+bt2.addEventListener("click", ()=>{
+    // 1. flag값을 false로 만들기
+    flag = false;
+    // 2. input과 확인버튼 보여지기
+btInput.style.display = 'flex';
+btArea.style.display = 'none';
 // 3. img는 what
+img.setAttribute("src", "../img/what.png")
 // 4. 초기화
-
+txt1.value = "";
+txt1.focus();
+n = underfined;
+})
 });
 });
