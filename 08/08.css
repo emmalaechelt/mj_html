@@ -6,9 +6,9 @@ form {
 }
 
 .mdiv {
-    width: 30%;
+    width : 35%;
     height: 50px;
-    margin-left: 30px;
+    margin-left: 100px;
     display: flex;
 }
 
@@ -25,4 +25,12 @@ form {
 
 [read-only] {
     background-color: beige;
+}
+
+[for = txt1] {
+    color: green;
+}
+
+[for = txt2] {
+    color: blue;
 }
