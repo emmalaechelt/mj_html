@@ -1,38 +1,55 @@
-package edu.ruby.java.ch11;
-/*
- * 자료구조에서 사용할 예외처리 > stack과 queue에서 사용 
- */
-class NagativeNumberException extends Exception {
-	public NagativeNumberException() {
-		super("음수는 허용하지 않습니다");//예외 발생시에 출력되는 위치를 확인 필요 
-	}
-}
+package edu.ruby.java.ch12;
 
-public class Test05 {
+import java.io.File;
+import java.io.PrintWriter;
 
-	int battery = 0;
+public class Test05 {	
+	
+	public static void main(String[] args) {
+		try {
+			File dir = new File("c:＼＼work");
+			dir.mkdir();
+			
+			File file = new File(dir, "file1.txt");
+			file.createNewFile();
+			
+			if(dir.isDirectory())
+				System.out.println(dir.getName() + "은 디렉토리입니다.");
+			if(file.isFile())
+				System.out.println(file.getName() + "은 파일입니다.");
+			if(file.exists()) {
+				try(PrintWriter out = new PrintWriter(file)){
+					out.println("hello java!");
+				}
+				System.out.println("파일 이름 : " + file.getName());
+				System.out.println("파일 경로 : " + file.getPath());
+				System.out.println("쓰기 가능 : " + file.canWrite());
+				System.out.println("읽기 가능 : " + file.canRead());
+				System.out.println("파일 길이 : " + file.length() + "바이트");
 
-	void charge(int time) { //멤버함수(객체가 있어야)
-
-		if (time < 0) {
-			time = 0;
-			try {
-				throw new NagativeNumberException();
-			} catch (NagativeNumberException e) {
-				e.printStackTrace();
-				System.out.println(e.getMessage());
+			} else {
+				System.out.println("작업할 파일이 존재하지 않음");
 			}
+			
+			File subDir = new File("c:＼＼work＼＼subDir");
+			subDir.mkdir();
+			File file2 = new File(subDir, "file2.txt");
+			file2.createNewFile();
+			
+			String file2Path = file2.getAbsolutePath();
+			System.out.println("절대 경로 : " + file2Path);
+			
+			File parentDir = file.getParentFile();
+			System.out.println("부모 경로 : " + parentDir);
+			
+			File parentFile = file.getParentFile();
+			String[] fileNames = parentFile.list();
+			System.out.println(parentDir + "목록 =>");
+			for(String name : fileNames) {
+				System.out.println(name);
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
 		}
-		battery += time;
-		System.out.println("현재 배터리 : " + battery);
-
-	}
-
-	public static void main(String[] args) { // 클래스 메소드
-
-		Test05 test = new Test05();
-		test.charge(30);
-		test.charge(20);
-		test.charge(-10);
 	}
 }
