@@ -1,30 +1,20 @@
+<%@page import="java.util.HashMap"%>
+<%@page import="common.Person"%>
+<%@page import="java.util.Map"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>내장 객체 - application</title>
+<title>application 영역</title>
 </head>
 <body>
-	<h2>web.xml에 설정한 내용 읽어오기</h2>
-	초기화 매개변수 : <%= application.getInitParameter("INIT_PARAM") %>
-	
-	<h2>서버의 물리적 경로 얻어오기</h2>
-	application 내장 객체 : <%= application.getRealPath("/02ImplicitObject") %>
-	
-	<h2>선언부에서 application 내장 객체 사용하기</h2>
-	<%! 
-	public String useImplicitObject() {
-		return this.getServletContext().getRealPath("/02ImplicitObject");
-	}
-	public String useImplicitObject(ServletContext app) {
-		return app.getRealPath("/02ImplicitObject");
-	}
-	%>
-	<ul>
-		<li>this 사용 : <%= useImplicitObject() %></li>
-		<li>내장 객체를 인수로 전달 : <%= useImplicitObject(application) %></li>
-	</ul>
+	<h2>application 영역의 공유</h2>
+	<%
+	Map<String, Person> maps = new HashMap<>();
+	maps.put("actor1", new Person("이수일", 30));
+	maps.put("actor2", new Person("심순애", 28));
+	application.setAttribute("maps", maps);%>
 </body>
 </html>
