@@ -1,0 +1,77 @@
+#mvMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.divDt,
+.mvul {
+    display: flex;
+    flex-direction: column;
+}
+
+.divDt {
+    background-color: aliceblue;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.mvul {
+    list-style: none;
+}
+
+.mvul > li {
+    display: flex;
+    border: none;
+    margin: 1px;
+    font-size: 15px;
+    width: 100%;
+    border:1px dotted aquamarine;
+    border-radius: 5%;
+}
+
+.mvul > .spMv:hover {
+    color: red;
+}
+
+.spRank {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 20px;
+    padding: 5px;
+    width: 20px;
+    background-color: aquamarine;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.spRank, .spMv {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 20px;
+    padding: 5px;   
+}
+
+.spMv {
+    color: blue;
+}
+
+.divDt, .mvul {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+li {
+    list-style: none;
+}
