@@ -7,13 +7,34 @@
     margin-top: 10px;
 }
 
+.poster {
+    width: 150px;
+    height: 200px;
+    border: 1px solid gainsboro;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .divDt,
 .mvul {
     display: flex;
     flex-direction: column;
 }
 
-.divDt {
+.divDt, divRadio {
+    display: flex;
     background-color: aliceblue;
     height: 40px;
     justify-content: center;
@@ -55,7 +76,7 @@
 
 .spRank, .spMv {
     display: inline-flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 
     height: 20px;
@@ -64,6 +85,7 @@
 
 .spMv {
     color: blue;
+    width: 80%;
 }
 
 .divDt, .mvul {
@@ -74,4 +96,30 @@
 
 li {
     list-style: none;
+}
+
+input[type=radio] {
+    border: 1px solid black;
+    display: inline-flex;
+    width: 10px;
+    padding: 30px;
+
+}
+
+
+.spRank, .sp, .spR, .spB {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20px;
+    height: 20px;
+}
+
+.spR {
+    color: red;
+}
+
+.spB {
+    color: blue;
 }
