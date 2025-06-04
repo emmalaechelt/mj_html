@@ -72,3 +72,11 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 });
+
+http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=9e4f73295d0c907aed711b60e1dd3e6f&targetDt=20250601
+
+//                 ${parseInt(item.rankInten)} > 0
+//                     ? '<span calss="spR"><i class="fa-solid fa-arrow-up"></i> + Math.abs(item.rankInten) + "</span>"
+//                     : parseInt(item.rankInten) < 0 
+//                         ? '<span class="spB"><i class="fa-solid fa-arrow-down"></i>' + Math.abs(item.rankInten) + "</span>" 
+//                         : '<i class="fa-solid fa-minus sp"></i>'
