@@ -1,5 +1,3 @@
-# K-digital 2기
-## HTML
-1. HTML 기초
----
-## CSS
+# K-digital 2
+
++ 호스팅 주소 : https://mj-html-mijeongs-projects-e683872d.vercel.app/
