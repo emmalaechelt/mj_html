@@ -19,7 +19,7 @@ const getPoster = (mvNM) => {
 const getMvList = (dt, ul, r) => {
     console.log("dt=", dt)
     const apikey = ""
-    let url = `https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=9e4f73295d0c907aed711b60e1dd3e6f&targetDt=${dt}`;
+    let url = `https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${dt}`;
 
     if (r == "r2") {
         url = `${url}&multiMovieYn=Y`
